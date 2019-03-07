@@ -7,6 +7,14 @@
       {
         "id": 18,
         "name": "Drama"
+      },
+      {
+        "id": 19,
+        "name": "Comedia"
+      },
+      {
+        "id": 10,
+        "name": "Thriller"
       }
     ],
     "homepage": "",

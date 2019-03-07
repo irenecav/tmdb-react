@@ -8,13 +8,17 @@ class Movie extends React.Component{
             <div className="card">
             <header className="card__header">
             <h2>{title}</h2>
-            <p>{date}</p>
             </header>
             <main className="card__main">
-            <p>{description}</p>
+            <figure>
+            <img src="" />
+            </figure>
             <ul>
                 {genres.map((genero)=> <li key={genero.id} >{genero.name}</li>)}
             </ul>
+            <p>{description}</p>
+            <p>{date}</p>
+           
 
             </main>
             <footer className="card__footer">

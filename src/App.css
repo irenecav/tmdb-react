@@ -1,5 +1,16 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700,800');
+
+
+:root{
+--primary-color-dark:   #343a40;
+--primary-color:        #14181c;
+--primary-color-light:  #fff;
+--color-secundary: #8b6ae7;
+}
+
 .App {
   text-align: center;
+  background-color: var(--primary-color-light);
 }
 
 .App-logo {
@@ -13,6 +24,69 @@
 .App-link {
   color: #61dafb;
 }
+
+figure{
+  border-bottom: var(--color-secundary)  solid 0.3rem;
+
+}
+
+figure img{
+  width: 100%;
+  height: auto;    
+  height: 13rem;
+  background-color: #eee;
+ 
+
+}
+
+.navbar-dark{
+background-color: #334659;
+}
+
+.card{
+  background-color:white;
+  margin: 0.5rem;
+  border: none;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  text-align: left;
+
+
+
+}
+
+.card__header{
+  padding: 1rem 0 0.5rem 0;
+  background-color: #3d5268;
+  color: white;
+  text-align: center;
+
+}
+
+.card__header h2{
+  font-size: 1.3rem;
+  font-family: 'Montserrat', sans-serif;
+
+
+}
+
+.card__main p{
+  margin-left: 0.7rem;
+  margin-right: 0.7rem;
+
+}
+
+.card__main ul{
+  padding-inline-start: 0.7rem;
+
+}
+
+.card__main li {
+  list-style: none;
+  display: inline;
+  margin-right: 0.7rem;
+  font-weight: 600;
+}
+
 
 @keyframes App-logo-spin {
   from {
