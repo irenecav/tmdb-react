@@ -3,29 +3,33 @@ import React from 'react';
 class Movie extends React.Component{
 
     render(){
-        const {title, date, description , genres} = this.props;
+        const {title, date, description , poster_path} = this.props;
+        
         return (
             <div className="card">
-            <header className="card__header">
+             <figure>
+            <img src={`https://image.tmdb.org/t/p/w1280${poster_path}`} alt={title}/>
+            </figure>
+            <div className="card__content">
+             <header className="card__content__header">
             <h2>{title}</h2>
             </header>
-            <main className="card__main">
-            <figure>
-            <img src="" />
-            </figure>
-            <ul>
-                {genres.map((genero)=> <li key={genero.id} >{genero.name}</li>)}
-            </ul>
+            <main className="card__content__main">
+           
+           
             <p>{description}</p>
             <p>{date}</p>
+            <ul>
+               {/* {genres.map((genero)=> <li key={genero.id} >{genero.name}</li>)}*/}
+            </ul>
            
 
             </main>
-            <footer className="card__footer">
+            <footer className="card__content__footer">
 
             </footer>
 
-            
+            </div>
             </div>
 
         )
