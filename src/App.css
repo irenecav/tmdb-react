@@ -7,6 +7,10 @@
 --primary-color-light:  #fff;
 --bg-color: #dee1e5;
 --color-secundary: #8b6ae7;
+--font-size: 1rem;
+--line-height:1.5rem;
+--lines:4;
+
 }
 
 .App {
@@ -53,6 +57,12 @@ figure img{
 background-color: var(--primary-color);
 }
 
+.wrap{
+  justify-content:space-evenly;
+  display: flex;
+  flex-flow: row wrap;
+}
+
 .card{
   background-color:white;
   margin: 0.5rem;
@@ -62,6 +72,8 @@ background-color: var(--primary-color);
   display: flex;
   align-items: stretch;
   flex-flow: row wrap;
+  width: 100%;
+  
 
 }
 
@@ -85,6 +97,18 @@ background-color: var(--primary-color);
   font-family: 'Montserrat', sans-serif;
 
 
+}
+
+.description{
+  display: block;
+  display: -webkit-box;
+  height: 6rem;
+  font-size: var(--font-size);
+  line-height: var(--line-height);
+  -webkit-line-clamp: var(--lines);
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .card__content__main p{
@@ -133,4 +157,11 @@ aside.social a {
   to {
     transform: rotate(360deg);
   }
+}
+
+
+@media screen and (min-width: 985px) {
+.card {
+  width: 48%;
+}
 }

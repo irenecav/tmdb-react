@@ -20,8 +20,11 @@ class App extends React.Component {
           <header className="App-header">
             <Navbar />
           </header>
+          <div className="wrap"> 
           <Movies />
+          </div>
         </SearchContext.Provider>
+        
 
         <Footer />
       </div>

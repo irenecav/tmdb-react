@@ -17,7 +17,7 @@ class Movie extends React.Component{
             <main className="card__content__main">
            
            
-            <p>{description}</p>
+            <p className="description">{description}</p>
             <p>{date}</p>
             <ul>
                {/* {genres.map((genero)=> <li key={genero.id} >{genero.name}</li>)}*/}
