@@ -11,7 +11,9 @@ import {
 } from 'react-router-dom';
 import Detail from './modules/Detail';
 import Collection from './modules/Collection';
-import Collections from './modules/Collections';
+import ShowCollections from './modules/ShowCollections';
+import WithCollectionsContext from './components/WithCollectionsContext';
+import WithRatedMoviesContext from './components/WithRatedMoviesContext';
 
 const RedirectToHome = () => <Redirect to="/" />;
 
@@ -24,15 +26,19 @@ class App extends React.Component {
             <Navbar />
           </header>
           <div className="wrap">
-            <Switch>
-              <Route exact path="/" component={Movies} />
-              <Route path="/movie/:id" component={Detail} />
-              <Route path="/collections" component={Collections} />
-              <Route path="/collection/:id" component={Collection} />
-              <Route component={RedirectToHome /* o una página 404 custom*/} />
-            </Switch>
-            <Footer />
+            <WithCollectionsContext>
+              <WithRatedMoviesContext>
+                <Switch>
+                  <Route exact path="/" component={Movies} />
+                  <Route path="/movie/:id" component={Detail} />
+                  <Route path="/collections" component={ShowCollections} />
+                  <Route path="/collection/:id" component={Collection} />
+                  <Route component={RedirectToHome /*o una 404 custom*/} />
+                </Switch>
+              </WithRatedMoviesContext>
+            </WithCollectionsContext>
           </div>
+          <Footer />
         </div>
       </Router>
     );

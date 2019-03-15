@@ -1,10 +1,11 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'react-router-dom/Link';
 
 class Search extends React.Component {
   state = {
     query: ''
   };
+
   render() {
     return (
       <form className="form-inline" onSubmit={e => e.preventDefault()}>

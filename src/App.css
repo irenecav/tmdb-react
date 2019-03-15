@@ -4,6 +4,7 @@
 :root{
 --primary-color-dark:   #343a40;
 --primary-color:        #334659;
+--primary-color-darker: #2d3e4f;
 --primary-color-light:  #fff;
 --bg-color: #dee1e5;
 --color-secundary: #8b6ae7;
@@ -34,12 +35,15 @@ figure{
   width: 35%;
   float: left;
   margin: 0px;
-  
+
 }
 
 .btn-primary{
   background-color: #8b6ae7;
   border-color: #8b6ae7;
+  font-family: 'Montserrat', sans-serif;
+
+
 }
 
 .btn-primary:hover{
@@ -55,6 +59,25 @@ figure img{
 
 .navbar-dark{
 background-color: var(--primary-color);
+margin-bottom: 1rem;
+}
+.titulo{
+  display: block;
+  width: 100%;
+  font-family: 'Montserrat', sans-serif;
+  margin-top: 1rem;
+  color: var(--primary-color);
+  text-align: left;
+  margin-left: 1rem;
+}
+
+.titulo h1{
+  display: inline;
+}
+
+.titulo button{
+  position: absolute;
+  right: 1rem;
 }
 
 .wrap{
@@ -73,7 +96,7 @@ background-color: var(--primary-color);
   align-items: stretch;
   flex-flow: row wrap;
   width: 100%;
-  
+
 
 }
 
@@ -86,10 +109,14 @@ background-color: var(--primary-color);
 
 .card__content__header{
   padding: 1rem 0 0.5rem 0;
-  background-color: var(--color-secundary);
+  background-color: var(--primary-color-darker);
   color: white;
   text-align: center;
 
+}
+
+.card__content__header a{
+  color: white;
 }
 
 .card__content__header h2{
@@ -130,10 +157,122 @@ background-color: var(--primary-color);
   font-weight: 600;
 }
 
+
+.card__content__footer {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin: 1rem;
+  text-align: right;
+}
+
+.card__content__footer i {
+  font-size: 2rem;
+  position: absolute;
+  right: 1rem;
+  bottom: 1rem;
+}
+
+.card__content__footer button{
+  margin-left: 1rem;
+
+}
+
+.card__content__rating {
+  margin-top: .5rem;
+  margin-left: 1rem;
+}
+
+
+.card__collection{
+  background-color: var(--primary-color-darker);
+  color: white;
+  padding: 1rem;
+  text-align: left;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 0.5rem;
+  position: relative;
+
+}
+
+.card__collection > a {
+  text-decoration: none;
+  color: white;
+}
+
+.card__collection h2{
+  font-size: 1.3rem;
+  font-family: 'Montserrat', sans-serif;
+  display: inline;
+  margin-right: 2rem;
+
+}
+
+.card__collection .badge {
+  margin-right: 1rem;
+}
+
+.card__collection i{
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+
+}
+
+.card__collection p{
+  color: #6f98b9;
+
+}
+
+.header__detail{
+  background-color: var(--primary-color-darker);
+  padding:1rem;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+
+
+}
+.header__detail h2{
+  display: inline;
+
+
+}
+.header__detail span{
+  margin-left: 0.5rem;
+  color: #6f98b9;
+  font-weight: bold;
+  font-size: 1.5rem;
+
+}
+.main__detail{
+  padding: 1rem;
+}
+
+section{
+  display: flex;
+  flex-flow: row wrap;
+  background-color: var(--primary-color-darker);
+  padding: 1rem;
+  color: white;
+  width: 100%;
+}
+
+.aside{
+  width: 50%;
+}
+
+.aside button{
+display: block;
+margin-bottom: 1rem;
+}
+
+
 .body__footer{
   background-color: var(--primary-color);
   padding: 1rem;
   color: var(--primary-color-light);
+  width: 100%;
+  margin-top: 1rem;
 }
 aside.social ul {
   list-style: none;
@@ -150,6 +289,9 @@ aside.social a {
   color: #4c6c86;
 }
 
+
+
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -161,7 +303,17 @@ aside.social a {
 
 
 @media screen and (min-width: 985px) {
+
+
 .card {
+  width: 48%;
+}
+
+.detail{
+  width: 80%;
+}
+
+.card__collection{
   width: 48%;
 }
 }
