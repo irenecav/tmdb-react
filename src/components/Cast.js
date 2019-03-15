@@ -8,7 +8,7 @@ const Cast = ({ cast }) => {
   const slicedCast = cast.slice(0, 5);
 
   return (
-    <ul>
+    <ul className="cast">
       {slicedCast.map(({ name, character, profile_path }, i) => {
         const imgSrc = profile_path
           ? `${IMG_URL}${profile_path}`

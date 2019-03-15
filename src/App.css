@@ -60,7 +60,19 @@ figure img{
 .navbar-dark{
 background-color: var(--primary-color);
 margin-bottom: 1rem;
+
 }
+
+.navbar-dark a{
+  color: white;
+  font-weight: bold;
+  margin-left: 1rem;
+}
+.navbar-dark a:hover{
+  color: var(--color-secundary);
+  text-decoration: none;
+}
+
 .titulo{
   display: block;
   width: 100%;
@@ -224,6 +236,12 @@ margin-bottom: 1rem;
 
 }
 
+.detail h3{
+  margin-left: 2rem;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  color:var(--primary-color);
+}
 .header__detail{
   background-color: var(--primary-color-darker);
   padding:1rem;
@@ -248,6 +266,14 @@ margin-bottom: 1rem;
   padding: 1rem;
 }
 
+.main__detail ul{
+  padding-inline-start: 0px;
+}
+
+li{
+list-style: none;
+}
+
 section{
   display: flex;
   flex-flow: row wrap;
@@ -255,10 +281,17 @@ section{
   padding: 1rem;
   color: white;
   width: 100%;
+  margin-bottom: 2rem;
 }
 
 .aside{
-  width: 50%;
+  width: 100%;
+    margin: 1rem;
+}
+
+.aside ul{
+  padding-inline-start: 0px;
+
 }
 
 .aside button{
@@ -266,6 +299,27 @@ display: block;
 margin-bottom: 1rem;
 }
 
+.cast{
+  padding-inline-start: 0px;
+display: flex;
+flex-flow: row wrap;
+margin-top: 1rem;
+margin-left: 1rem;
+}
+
+.cast li{
+  width: 100%;
+  margin: 0.5rem;
+  overflow:hidden;
+  white-space:nowrap;
+  text-overflow: ellipsis;
+  margin:1rem;
+  font-weight: bold;
+}
+
+.cast span{
+  font-weight: normal;
+}
 
 .body__footer{
   background-color: var(--primary-color);
@@ -313,7 +367,14 @@ aside.social a {
   width: 80%;
 }
 
+.cast li{
+  width: 45%;}
+
 .card__collection{
   width: 48%;
+}
+
+.aside{
+width: 46%;
 }
 }

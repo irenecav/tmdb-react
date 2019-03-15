@@ -95,7 +95,7 @@ class Detail extends Component {
 
                 <p>{overview}</p>
 
-                <Cast cast={cast} />
+                
 
                 <ul>
                   {production_countries.map(({ name }, i) => (
@@ -141,7 +141,11 @@ class Detail extends Component {
                 />
               </div>
             </section>
+            <h3>Top Billed Cast</h3>
+            <Cast cast={cast} />
+            <h3>Featured Crew</h3>
             <Crew crew={crew} />
+
 
             <footer />
           </div>
